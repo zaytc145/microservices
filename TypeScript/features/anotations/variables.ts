@@ -19,3 +19,26 @@ let point: { x: number; y: number } = {
 const logNumber: (i: number) => void = (i: number) => {
     console.log(i);
 };
+
+// When use anotations
+const json = '{"x": 10, "y": 15}';
+const coordinates: { x: number; y: number } = JSON.parse(json);
+
+let words = ["red", "green", "blue"];
+let foundWord = false;
+
+words.forEach(word => {
+    if (word == "green") {
+        foundWord = true;
+    }
+});
+
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+
+numbers.forEach(number => {
+    if (number > 10) {
+        numberAboveZero = number;
+    }
+});
+//
