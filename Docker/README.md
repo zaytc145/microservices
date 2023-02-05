@@ -1,4 +1,4 @@
-# Commads
+# Commands
 
 Run container from image hello-world
 
