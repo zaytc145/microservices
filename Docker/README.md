@@ -33,7 +33,7 @@ docker start -a <id>
 
 -a - read content from container
 
-`docker ps --all` - list all containers
+`docker ps --all(-a)` - list all containers
 
 `docker start <id>` - start container by id
 `docker start -a <id>` - start container by id with logs
@@ -44,3 +44,13 @@ docker start -a <id>
 
 `docker stop <id>` - soft stop (sigterm)
 `docker kill <id>` - hard stop (sigkill)
+
+`docker exec -it <id>` - run command inside container
+-i - connect to terminal
+-t - formating
+
+`docker exec -it <id> sh` - run terminal inside container
+
+`docker commit -c 'CMD "redis-server"' <id>` - take a container snapshot
+
+`docker run -p <pcPort>:<containerPort> <id>` - port mapping
